@@ -30,14 +30,15 @@ class EvalResult:
     latency_s: float
 
 
-def build_prompt(tokenizer, question: str, system_prompt: str = DEFAULT_SYSTEM_PROMPT) -> str:
-    if hasattr(tokenizer, "apply_chat_template"):
+def build_prompt(tokenizer, question: str, system_prompt: str = DEFAULT_SYSTEM_PROMPT, *, use_chat_template: bool = True) -> str:
+    if use_chat_template and hasattr(tokenizer, "apply_chat_template"):
         messages = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": question},
         ]
         return tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    return f"{system_prompt}\n\nQuestion: {question}\n\nAnswer:"
+    # Plain prompt without chat roles/system prompt to avoid prefacing outputs (e.g., "Human:")
+    return f"Question: {question}\nAnswer:"
 
 
 def extract_final_answer(text: str) -> str:
@@ -88,11 +89,13 @@ class MathEvaluator:
         pipeline,
         generation_kwargs: Dict,
         system_prompt: str = DEFAULT_SYSTEM_PROMPT,
+        use_chat_template: bool = True,
         batch_size: int = 1,
     ):
         self.pipeline = pipeline
         self.generation_kwargs = generation_kwargs
         self.system_prompt = system_prompt
+        self.use_chat_template = use_chat_template
         self.batch_size = max(1, batch_size)
 
     def run(self, tasks: List[MathTask]) -> Dict:
@@ -100,7 +103,15 @@ class MathEvaluator:
         correct = 0
         iterator = tqdm(tasks, desc="Evaluating", leave=False)
         for batch in _batched(tasks, self.batch_size):
-            prompts = [build_prompt(self.pipeline.tokenizer, t.question, self.system_prompt) for t in batch]
+            prompts = [
+                build_prompt(
+                    self.pipeline.tokenizer,
+                    t.question,
+                    self.system_prompt,
+                    use_chat_template=self.use_chat_template,
+                )
+                for t in batch
+            ]
             start = time.perf_counter()
             outputs = self.pipeline(prompts, batch_size=self.batch_size, **self.generation_kwargs)
             batch_latency = time.perf_counter() - start

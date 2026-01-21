@@ -45,6 +45,8 @@ def load_text_generation_pipeline(
         trust_remote_code=model_config.trust_remote_code,
         local_files_only=local_files_only,
     )
+    # Left padding is safer for decoder-only generation to avoid misplaced positions.
+    tokenizer.padding_side = "left"
     model = AutoModelForCausalLM.from_pretrained(
         source,
         revision=model_config.revision,

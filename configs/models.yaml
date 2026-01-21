@@ -23,16 +23,39 @@ models:
       temperature: 0.2
       top_p: 0.95
 
-  # Example of a locally finetuned / modified checkpoint.
-  # Point local_path to the directory that contains model files (config.json, model.safetensors, tokenizer files, etc).
-  qwen2.5-1.5b-local:
-    display_name: Qwen2.5 1.5B Instruct (local)
-    repo_id: Qwen/Qwen2.5-1.5B-Instruct  # kept for reference; not used when local_path is set
-    local_path: "../local-checkpoints/qwen2.5-1.5b-instruct"
+  qwen2.5-0.5b-sft-gsm8k:
+    local_path: ../outputs/gsm8k-qwen05-lora-full/merged
+    repo_id: Qwen/Qwen2.5-0.5B-Instruct
     trust_remote_code: true
     device_map: auto
     torch_dtype: bfloat16
-    generation:
-      max_new_tokens: 256
-      temperature: 0.2
-      top_p: 0.95
+
+  qwen2.5-0.5b-sft-gsm8k-1k:
+    local_path: ../outputs/gsm8k-qwen05-lora-1k/merged
+    repo_id: Qwen/Qwen2.5-0.5B-Instruct
+    trust_remote_code: true
+    device_map: auto
+    torch_dtype: bfloat16
+
+  qwen2.5-0.5b-sft1k-dpo1k:
+    local_path: ../outputs/gsm8k-qwen05-lora1k-dpo1k/merged
+    repo_id: Qwen/Qwen2.5-0.5B-Instruct
+    trust_remote_code: true
+    device_map: auto
+    torch_dtype: bfloat16
+
+  qwen2.5-0.5b-sft1k-dpo1k-v2:
+    # SFT on 1k + DPO on 1k (v2: lower LR, higher beta); merge before use.
+    local_path: ../outputs/gsm8k-qwen05-lora1k-dpo1k-v2/merged
+    repo_id: Qwen/Qwen2.5-0.5B-Instruct
+    trust_remote_code: true
+    device_map: auto
+    torch_dtype: bfloat16
+
+  qwen2.5-0.5b-sft1k-dpo1k-v3:
+    # SFT on 1k + DPO on 1k (v3: higher LR, lower beta); merge before use.
+    local_path: ../outputs/gsm8k-qwen05-lora1k-dpo1k-v3/merged
+    repo_id: Qwen/Qwen2.5-0.5B-Instruct
+    trust_remote_code: true
+    device_map: auto
+    torch_dtype: bfloat16

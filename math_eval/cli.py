@@ -26,6 +26,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--show-failures", action="store_true", help="Print failed cases to stdout.")
     parser.add_argument("--report", type=str, default=None, help="Write a human-readable report (txt).")
     parser.add_argument("--batch-size", type=int, default=1, help="Batch size for generation (helps GPU throughput).")
+    parser.add_argument("--no-chat-template", action="store_true", help="Disable chat template; use plain question prompt.")
     return parser.parse_args()
 
 
@@ -63,7 +64,12 @@ def main() -> None:
         device_override=args.device,
     )
 
-    evaluator = MathEvaluator(pipeline, gen_kwargs, batch_size=args.batch_size)
+    evaluator = MathEvaluator(
+        pipeline,
+        gen_kwargs,
+        batch_size=args.batch_size,
+        use_chat_template=not args.no_chat_template,
+    )
     summary = evaluator.run(tasks)
 
     print(f"Accuracy: {summary['accuracy']*100:.1f}% ({summary['correct']}/{summary['total']})")
@@ -74,7 +80,7 @@ def main() -> None:
         for rec in failures:
             print(f"- {rec.task_id}: expected '{rec.reference_answer}', predicted '{rec.extracted_answer}'")
             print(f"  question: {rec.question}")
-            print(f"  model output: {_truncate(rec.model_output)}")
+            print(f"  model output: {rec.model_output}")
         print("")
 
     if args.output:
@@ -84,10 +90,6 @@ def main() -> None:
     if args.report:
         write_text_report(args.report, summary, failures)
         print(f"Wrote report to {args.report}")
-
-
-def _truncate(text: str, limit: int = 220) -> str:
-    return text if len(text) <= limit else text[: limit - 3] + "..."
 
 
 def write_text_report(path: str, summary, failures) -> None:
@@ -102,7 +104,7 @@ def write_text_report(path: str, summary, failures) -> None:
         for rec in failures:
             lines.append(f"- {rec.task_id}: expected '{rec.reference_answer}', predicted '{rec.extracted_answer}'")
             lines.append(f"  question: {rec.question}")
-            lines.append(f"  model output: {_truncate(rec.model_output)}")
+            lines.append(f"  model output: {rec.model_output}")
     else:
         lines.append("All cases correct.")
 
