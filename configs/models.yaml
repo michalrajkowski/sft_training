@@ -59,3 +59,40 @@ models:
     trust_remote_code: true
     device_map: auto
     torch_dtype: bfloat16
+
+  qwen2.5-0.5b-math_chatty-1k:
+    # SFT on mul_partials_train_1k
+    local_path: ../outputs/qwen05-math_chatty-1k/merged
+    repo_id: Qwen/Qwen2.5-0.5B-Instruct
+    trust_remote_code: true
+    device_map: auto
+    torch_dtype: bfloat16
+
+  qwen2.5-0.5b-math_partials-1k:
+    # SFT on mul_partials_compact_1k
+    local_path: ../outputs/qwen05-math_partials-1k/merged
+    repo_id: Qwen/Qwen2.5-0.5B-Instruct
+    trust_remote_code: true
+    device_map: auto
+    torch_dtype: bfloat16
+
+  qwen2.5-0.5b-sft1k-dpo5k-v1:
+    local_path: ../outputs/gsm8k-qwen05-lora1k-dpo5k-v1/merged
+    repo_id: Qwen/Qwen2.5-0.5B-Instruct
+    trust_remote_code: true
+    device_map: auto
+    torch_dtype: bfloat16
+
+  qwen2.5-0.5b-math_chatty-1k:
+    local_path: ../outputs/qwen05-math_chatty-1k/merged
+    repo_id: Qwen/Qwen2.5-0.5B-Instruct
+    trust_remote_code: true
+    device_map: auto
+    torch_dtype: bfloat16
+
+  qwen2.5-0.5b-math_partials-1k:
+    local_path: ../outputs/qwen05-math_partials-1k/merged
+    repo_id: Qwen/Qwen2.5-0.5B-Instruct
+    trust_remote_code: true
+    device_map: auto
+    torch_dtype: bfloat16
