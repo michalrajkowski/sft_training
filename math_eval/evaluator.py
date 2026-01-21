@@ -5,7 +5,7 @@ import re
 import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, Iterable, List, Optional
 
 from tqdm import tqdm
 
@@ -88,36 +88,42 @@ class MathEvaluator:
         pipeline,
         generation_kwargs: Dict,
         system_prompt: str = DEFAULT_SYSTEM_PROMPT,
+        batch_size: int = 1,
     ):
         self.pipeline = pipeline
         self.generation_kwargs = generation_kwargs
         self.system_prompt = system_prompt
+        self.batch_size = max(1, batch_size)
 
     def run(self, tasks: List[MathTask]) -> Dict:
         results: List[EvalResult] = []
         correct = 0
         iterator = tqdm(tasks, desc="Evaluating", leave=False)
-        for task in iterator:
-            prompt = build_prompt(self.pipeline.tokenizer, task.question, self.system_prompt)
+        for batch in _batched(tasks, self.batch_size):
+            prompts = [build_prompt(self.pipeline.tokenizer, t.question, self.system_prompt) for t in batch]
             start = time.perf_counter()
-            outputs = self.pipeline(prompt, **self.generation_kwargs)
-            latency = time.perf_counter() - start
-            generated_text = outputs[0]["generated_text"]
-            extracted = extract_final_answer(generated_text)
-            is_correct = verify_answer(task.answer, extracted)
-            correct += int(is_correct)
-            results.append(
-                EvalResult(
-                    task_id=task.task_id,
-                    question=task.question,
-                    reference_answer=task.answer,
-                    model_output=generated_text,
-                    extracted_answer=extracted,
-                    is_correct=is_correct,
-                    latency_s=latency,
+            outputs = self.pipeline(prompts, batch_size=self.batch_size, **self.generation_kwargs)
+            batch_latency = time.perf_counter() - start
+            # pipeline returns list[list[dict]] when batched
+            for task, output in zip(batch, outputs):
+                choice = output[0] if isinstance(output, list) else output
+                generated_text = choice["generated_text"]
+                extracted = extract_final_answer(generated_text)
+                is_correct = verify_answer(task.answer, extracted)
+                correct += int(is_correct)
+                results.append(
+                    EvalResult(
+                        task_id=task.task_id,
+                        question=task.question,
+                        reference_answer=task.answer,
+                        model_output=generated_text,
+                        extracted_answer=extracted,
+                        is_correct=is_correct,
+                        latency_s=batch_latency / max(1, len(batch)),
+                    )
                 )
-            )
-            iterator.set_postfix(acc=f"{correct}/{len(results)}")
+                iterator.update(1)
+                iterator.set_postfix(acc=f"{correct}/{len(results)}")
 
         total = len(results)
         accuracy = correct / total if total else 0.0
@@ -130,3 +136,8 @@ class MathEvaluator:
         with output_path.open("w") as handle:
             for record in results:
                 handle.write(json.dumps(asdict(record), ensure_ascii=False) + "\n")
+
+
+def _batched(items: List[MathTask], batch_size: int) -> Iterable[List[MathTask]]:
+    for idx in range(0, len(items), batch_size):
+        yield items[idx : idx + batch_size]

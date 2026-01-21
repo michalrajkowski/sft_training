@@ -1,0 +1,200 @@
+{"id": "mult-001", "question": "Compute 83 * 16.", "answer": "1328"}
+{"id": "mult-002", "question": "Compute 5 * 96.", "answer": "480"}
+{"id": "mult-003", "question": "Compute 37 * 33.", "answer": "1221"}
+{"id": "mult-004", "question": "Compute 30 * 19.", "answer": "570"}
+{"id": "mult-005", "question": "Compute 96 * 15.", "answer": "1440"}
+{"id": "mult-006", "question": "Compute 88 * 96.", "answer": "8448"}
+{"id": "mult-007", "question": "Compute 71 * 13.", "answer": "923"}
+{"id": "mult-008", "question": "Compute 77 * 56.", "answer": "4312"}
+{"id": "mult-009", "question": "Compute 6 * 5.", "answer": "30"}
+{"id": "mult-010", "question": "Compute 13 * 29.", "answer": "377"}
+{"id": "mult-011", "question": "Compute 31 * 66.", "answer": "2046"}
+{"id": "mult-012", "question": "Compute 79 * 5.", "answer": "395"}
+{"id": "mult-013", "question": "Compute 73 * 27.", "answer": "1971"}
+{"id": "mult-014", "question": "Compute 93 * 85.", "answer": "7905"}
+{"id": "mult-015", "question": "Compute 91 * 71.", "answer": "6461"}
+{"id": "mult-016", "question": "Compute 55 * 30.", "answer": "1650"}
+{"id": "mult-017", "question": "Compute 59 * 77.", "answer": "4543"}
+{"id": "mult-018", "question": "Compute 37 * 2.", "answer": "74"}
+{"id": "mult-019", "question": "Compute 99 * 22.", "answer": "2178"}
+{"id": "mult-020", "question": "Compute 91 * 56.", "answer": "5096"}
+{"id": "mult-021", "question": "Compute 45 * 37.", "answer": "1665"}
+{"id": "mult-022", "question": "Compute 21 * 29.", "answer": "609"}
+{"id": "mult-023", "question": "Compute 99 * 45.", "answer": "4455"}
+{"id": "mult-024", "question": "Compute 15 * 13.", "answer": "195"}
+{"id": "mult-025", "question": "Compute 50 * 14.", "answer": "700"}
+{"id": "mult-026", "question": "Compute 47 * 46.", "answer": "2162"}
+{"id": "mult-027", "question": "Compute 79 * 35.", "answer": "2765"}
+{"id": "mult-028", "question": "Compute 7 * 95.", "answer": "665"}
+{"id": "mult-029", "question": "Compute 60 * 70.", "answer": "4200"}
+{"id": "mult-030", "question": "Compute 17 * 50.", "answer": "850"}
+{"id": "mult-031", "question": "Compute 12 * 72.", "answer": "864"}
+{"id": "mult-032", "question": "Compute 39 * 82.", "answer": "3198"}
+{"id": "mult-033", "question": "Compute 81 * 48.", "answer": "3888"}
+{"id": "mult-034", "question": "Compute 75 * 26.", "answer": "1950"}
+{"id": "mult-035", "question": "Compute 92 * 10.", "answer": "920"}
+{"id": "mult-036", "question": "Compute 7 * 86.", "answer": "602"}
+{"id": "mult-037", "question": "Compute 31 * 39.", "answer": "1209"}
+{"id": "mult-038", "question": "Compute 12 * 31.", "answer": "372"}
+{"id": "mult-039", "question": "Compute 14 * 50.", "answer": "700"}
+{"id": "mult-040", "question": "Compute 37 * 60.", "answer": "2220"}
+{"id": "rect-area-001", "question": "A rectangle has length 41 and width 24. What is its area?", "answer": "984"}
+{"id": "rect-area-002", "question": "A rectangle has length 11 and width 24. What is its area?", "answer": "264"}
+{"id": "rect-area-003", "question": "A rectangle has length 23 and width 14. What is its area?", "answer": "322"}
+{"id": "rect-area-004", "question": "A rectangle has length 43 and width 18. What is its area?", "answer": "774"}
+{"id": "rect-area-005", "question": "A rectangle has length 45 and width 44. What is its area?", "answer": "1980"}
+{"id": "rect-area-006", "question": "A rectangle has length 42 and width 5. What is its area?", "answer": "210"}
+{"id": "rect-area-007", "question": "A rectangle has length 39 and width 41. What is its area?", "answer": "1599"}
+{"id": "rect-area-008", "question": "A rectangle has length 11 and width 35. What is its area?", "answer": "385"}
+{"id": "rect-area-009", "question": "A rectangle has length 47 and width 16. What is its area?", "answer": "752"}
+{"id": "rect-area-010", "question": "A rectangle has length 11 and width 30. What is its area?", "answer": "330"}
+{"id": "rect-area-011", "question": "A rectangle has length 25 and width 18. What is its area?", "answer": "450"}
+{"id": "rect-area-012", "question": "A rectangle has length 41 and width 45. What is its area?", "answer": "1845"}
+{"id": "rect-area-013", "question": "A rectangle has length 36 and width 15. What is its area?", "answer": "540"}
+{"id": "rect-area-014", "question": "A rectangle has length 44 and width 21. What is its area?", "answer": "924"}
+{"id": "rect-area-015", "question": "A rectangle has length 50 and width 50. What is its area?", "answer": "2500"}
+{"id": "rect-area-016", "question": "A rectangle has length 4 and width 15. What is its area?", "answer": "60"}
+{"id": "rect-area-017", "question": "A rectangle has length 3 and width 21. What is its area?", "answer": "63"}
+{"id": "rect-area-018", "question": "A rectangle has length 26 and width 18. What is its area?", "answer": "468"}
+{"id": "rect-area-019", "question": "A rectangle has length 5 and width 14. What is its area?", "answer": "70"}
+{"id": "rect-area-020", "question": "A rectangle has length 37 and width 46. What is its area?", "answer": "1702"}
+{"id": "rect-area-021", "question": "A rectangle has length 21 and width 14. What is its area?", "answer": "294"}
+{"id": "rect-area-022", "question": "A rectangle has length 42 and width 32. What is its area?", "answer": "1344"}
+{"id": "rect-area-023", "question": "A rectangle has length 26 and width 42. What is its area?", "answer": "1092"}
+{"id": "rect-area-024", "question": "A rectangle has length 30 and width 10. What is its area?", "answer": "300"}
+{"id": "rect-area-025", "question": "A rectangle has length 17 and width 9. What is its area?", "answer": "153"}
+{"id": "rect-area-026", "question": "A rectangle has length 16 and width 48. What is its area?", "answer": "768"}
+{"id": "rect-area-027", "question": "A rectangle has length 36 and width 35. What is its area?", "answer": "1260"}
+{"id": "rect-area-028", "question": "A rectangle has length 17 and width 48. What is its area?", "answer": "816"}
+{"id": "rect-area-029", "question": "A rectangle has length 38 and width 28. What is its area?", "answer": "1064"}
+{"id": "rect-area-030", "question": "A rectangle has length 38 and width 26. What is its area?", "answer": "988"}
+{"id": "rect-area-031", "question": "A rectangle has length 24 and width 15. What is its area?", "answer": "360"}
+{"id": "rect-area-032", "question": "A rectangle has length 9 and width 33. What is its area?", "answer": "297"}
+{"id": "rect-area-033", "question": "A rectangle has length 32 and width 6. What is its area?", "answer": "192"}
+{"id": "rect-area-034", "question": "A rectangle has length 49 and width 4. What is its area?", "answer": "196"}
+{"id": "rect-area-035", "question": "A rectangle has length 8 and width 10. What is its area?", "answer": "80"}
+{"id": "rect-area-036", "question": "A rectangle has length 41 and width 11. What is its area?", "answer": "451"}
+{"id": "rect-area-037", "question": "A rectangle has length 44 and width 28. What is its area?", "answer": "1232"}
+{"id": "rect-area-038", "question": "A rectangle has length 39 and width 5. What is its area?", "answer": "195"}
+{"id": "rect-area-039", "question": "A rectangle has length 25 and width 25. What is its area?", "answer": "625"}
+{"id": "rect-area-040", "question": "A rectangle has length 39 and width 30. What is its area?", "answer": "1170"}
+{"id": "lin-eq-001", "question": "Solve for x: 10x + 5 = -35.", "answer": "-4"}
+{"id": "lin-eq-002", "question": "Solve for x: 2x + 13 = -13.", "answer": "-13"}
+{"id": "lin-eq-003", "question": "Solve for x: 10x + 19 = -11.", "answer": "-3"}
+{"id": "lin-eq-004", "question": "Solve for x: 12x - 23 = -11.", "answer": "1"}
+{"id": "lin-eq-005", "question": "Solve for x: 6x - 20 = 22.", "answer": "7"}
+{"id": "lin-eq-006", "question": "Solve for x: 9x + 16 = -164.", "answer": "-20"}
+{"id": "lin-eq-007", "question": "Solve for x: 6x + 18 = 90.", "answer": "12"}
+{"id": "lin-eq-008", "question": "Solve for x: 4x + 28 = 76.", "answer": "12"}
+{"id": "lin-eq-009", "question": "Solve for x: 3x - 11 = 49.", "answer": "20"}
+{"id": "lin-eq-010", "question": "Solve for x: 12x + 8 = 152.", "answer": "12"}
+{"id": "lin-eq-011", "question": "Solve for x: 5x - 7 = -62.", "answer": "-11"}
+{"id": "lin-eq-012", "question": "Solve for x: 4x + 19 = 75.", "answer": "14"}
+{"id": "lin-eq-013", "question": "Solve for x: 10x + 8 = -192.", "answer": "-20"}
+{"id": "lin-eq-014", "question": "Solve for x: 7x - 29 = 48.", "answer": "11"}
+{"id": "lin-eq-015", "question": "Solve for x: 3x + 26 = 35.", "answer": "3"}
+{"id": "lin-eq-016", "question": "Solve for x: 6x - 27 = -57.", "answer": "-5"}
+{"id": "lin-eq-017", "question": "Solve for x: 5x + 30 = 110.", "answer": "16"}
+{"id": "lin-eq-018", "question": "Solve for x: 3x + 16 = -29.", "answer": "-15"}
+{"id": "lin-eq-019", "question": "Solve for x: 9x + 18 = -126.", "answer": "-16"}
+{"id": "lin-eq-020", "question": "Solve for x: 10x - 22 = -142.", "answer": "-12"}
+{"id": "lin-eq-021", "question": "Solve for x: 12x + 30 = 150.", "answer": "10"}
+{"id": "lin-eq-022", "question": "Solve for x: 10x - 14 = -114.", "answer": "-10"}
+{"id": "lin-eq-023", "question": "Solve for x: 10x - 3 = 177.", "answer": "18"}
+{"id": "lin-eq-024", "question": "Solve for x: 5x + 18 = 88.", "answer": "14"}
+{"id": "lin-eq-025", "question": "Solve for x: 5x - 5 = -10.", "answer": "-1"}
+{"id": "lin-eq-026", "question": "Solve for x: 12x - 2 = 34.", "answer": "3"}
+{"id": "lin-eq-027", "question": "Solve for x: 10x - 23 = 57.", "answer": "8"}
+{"id": "lin-eq-028", "question": "Solve for x: 5x - 26 = -56.", "answer": "-6"}
+{"id": "lin-eq-029", "question": "Solve for x: 7x + 7 = -126.", "answer": "-19"}
+{"id": "lin-eq-030", "question": "Solve for x: 10x + 7 = -53.", "answer": "-6"}
+{"id": "lin-eq-031", "question": "Solve for x: 5x - 26 = -126.", "answer": "-20"}
+{"id": "lin-eq-032", "question": "Solve for x: 12x - 16 = -220.", "answer": "-17"}
+{"id": "lin-eq-033", "question": "Solve for x: 3x + 25 = -29.", "answer": "-18"}
+{"id": "lin-eq-034", "question": "Solve for x: 7x + 2 = -110.", "answer": "-16"}
+{"id": "lin-eq-035", "question": "Solve for x: 5x + 12 = -3.", "answer": "-3"}
+{"id": "lin-eq-036", "question": "Solve for x: 9x + 4 = -59.", "answer": "-7"}
+{"id": "lin-eq-037", "question": "Solve for x: 4x + 6 = 70.", "answer": "16"}
+{"id": "lin-eq-038", "question": "Solve for x: 9x + 20 = -25.", "answer": "-5"}
+{"id": "lin-eq-039", "question": "Solve for x: 9x - 18 = 36.", "answer": "6"}
+{"id": "lin-eq-040", "question": "Solve for x: 3x + 12 = -30.", "answer": "-14"}
+{"id": "simp-frac-001", "question": "Simplify the fraction 112/92.", "answer": "28/23"}
+{"id": "simp-frac-002", "question": "Simplify the fraction 990/963.", "answer": "110/107"}
+{"id": "simp-frac-003", "question": "Simplify the fraction 564/45.", "answer": "188/15"}
+{"id": "simp-frac-004", "question": "Simplify the fraction 119/735.", "answer": "17/105"}
+{"id": "simp-frac-005", "question": "Simplify the fraction 145/325.", "answer": "29/65"}
+{"id": "simp-frac-006", "question": "Simplify the fraction 450/1251.", "answer": "50/139"}
+{"id": "simp-frac-007", "question": "Simplify the fraction 148/440.", "answer": "37/110"}
+{"id": "simp-frac-008", "question": "Simplify the fraction 365/600.", "answer": "73/120"}
+{"id": "simp-frac-009", "question": "Simplify the fraction 210/1150.", "answer": "21/115"}
+{"id": "simp-frac-010", "question": "Simplify the fraction 270/140.", "answer": "27/14"}
+{"id": "simp-frac-011", "question": "Simplify the fraction 5/25.", "answer": "1/5"}
+{"id": "simp-frac-012", "question": "Simplify the fraction 194/62.", "answer": "97/31"}
+{"id": "simp-frac-013", "question": "Simplify the fraction 44/106.", "answer": "22/53"}
+{"id": "simp-frac-014", "question": "Simplify the fraction 630/625.", "answer": "126/125"}
+{"id": "simp-frac-015", "question": "Simplify the fraction 416/68.", "answer": "104/17"}
+{"id": "simp-frac-016", "question": "Simplify the fraction 792/16.", "answer": "99/2"}
+{"id": "simp-frac-017", "question": "Simplify the fraction 414/708.", "answer": "69/118"}
+{"id": "simp-frac-018", "question": "Simplify the fraction 110/180.", "answer": "11/18"}
+{"id": "simp-frac-019", "question": "Simplify the fraction 189/144.", "answer": "21/16"}
+{"id": "simp-frac-020", "question": "Simplify the fraction 1539/1665.", "answer": "171/185"}
+{"id": "simp-frac-021", "question": "Simplify the fraction 246/300.", "answer": "41/50"}
+{"id": "simp-frac-022", "question": "Simplify the fraction 570/160.", "answer": "57/16"}
+{"id": "simp-frac-023", "question": "Simplify the fraction 119/1351.", "answer": "17/193"}
+{"id": "simp-frac-024", "question": "Simplify the fraction 16/14.", "answer": "8/7"}
+{"id": "simp-frac-025", "question": "Simplify the fraction 1510/1240.", "answer": "151/124"}
+{"id": "simp-frac-026", "question": "Simplify the fraction 274/84.", "answer": "137/42"}
+{"id": "simp-frac-027", "question": "Simplify the fraction 132/22.", "answer": "6/1"}
+{"id": "simp-frac-028", "question": "Simplify the fraction 147/57.", "answer": "49/19"}
+{"id": "simp-frac-029", "question": "Simplify the fraction 174/62.", "answer": "87/31"}
+{"id": "simp-frac-030", "question": "Simplify the fraction 525/160.", "answer": "105/32"}
+{"id": "simp-frac-031", "question": "Simplify the fraction 150/154.", "answer": "75/77"}
+{"id": "simp-frac-032", "question": "Simplify the fraction 12/160.", "answer": "3/40"}
+{"id": "simp-frac-033", "question": "Simplify the fraction 220/1090.", "answer": "22/109"}
+{"id": "simp-frac-034", "question": "Simplify the fraction 82/68.", "answer": "41/34"}
+{"id": "simp-frac-035", "question": "Simplify the fraction 378/1211.", "answer": "54/173"}
+{"id": "simp-frac-036", "question": "Simplify the fraction 63/69.", "answer": "21/23"}
+{"id": "simp-frac-037", "question": "Simplify the fraction 618/210.", "answer": "103/35"}
+{"id": "simp-frac-038", "question": "Simplify the fraction 357/246.", "answer": "119/82"}
+{"id": "simp-frac-039", "question": "Simplify the fraction 12/357.", "answer": "4/119"}
+{"id": "simp-frac-040", "question": "Simplify the fraction 100/695.", "answer": "20/139"}
+{"id": "sum-first-n-001", "question": "What is the sum of the first 134 positive integers?", "answer": "9045"}
+{"id": "sum-first-n-002", "question": "What is the sum of the first 72 positive integers?", "answer": "2628"}
+{"id": "sum-first-n-003", "question": "What is the sum of the first 38 positive integers?", "answer": "741"}
+{"id": "sum-first-n-004", "question": "What is the sum of the first 94 positive integers?", "answer": "4465"}
+{"id": "sum-first-n-005", "question": "What is the sum of the first 22 positive integers?", "answer": "253"}
+{"id": "sum-first-n-006", "question": "What is the sum of the first 67 positive integers?", "answer": "2278"}
+{"id": "sum-first-n-007", "question": "What is the sum of the first 99 positive integers?", "answer": "4950"}
+{"id": "sum-first-n-008", "question": "What is the sum of the first 77 positive integers?", "answer": "3003"}
+{"id": "sum-first-n-009", "question": "What is the sum of the first 45 positive integers?", "answer": "1035"}
+{"id": "sum-first-n-010", "question": "What is the sum of the first 117 positive integers?", "answer": "6903"}
+{"id": "sum-first-n-011", "question": "What is the sum of the first 144 positive integers?", "answer": "10440"}
+{"id": "sum-first-n-012", "question": "What is the sum of the first 185 positive integers?", "answer": "17205"}
+{"id": "sum-first-n-013", "question": "What is the sum of the first 82 positive integers?", "answer": "3403"}
+{"id": "sum-first-n-014", "question": "What is the sum of the first 161 positive integers?", "answer": "13041"}
+{"id": "sum-first-n-015", "question": "What is the sum of the first 172 positive integers?", "answer": "14878"}
+{"id": "sum-first-n-016", "question": "What is the sum of the first 140 positive integers?", "answer": "9870"}
+{"id": "sum-first-n-017", "question": "What is the sum of the first 7 positive integers?", "answer": "28"}
+{"id": "sum-first-n-018", "question": "What is the sum of the first 175 positive integers?", "answer": "15400"}
+{"id": "sum-first-n-019", "question": "What is the sum of the first 146 positive integers?", "answer": "10731"}
+{"id": "sum-first-n-020", "question": "What is the sum of the first 81 positive integers?", "answer": "3321"}
+{"id": "sum-first-n-021", "question": "What is the sum of the first 174 positive integers?", "answer": "15225"}
+{"id": "sum-first-n-022", "question": "What is the sum of the first 31 positive integers?", "answer": "496"}
+{"id": "sum-first-n-023", "question": "What is the sum of the first 39 positive integers?", "answer": "780"}
+{"id": "sum-first-n-024", "question": "What is the sum of the first 72 positive integers?", "answer": "2628"}
+{"id": "sum-first-n-025", "question": "What is the sum of the first 34 positive integers?", "answer": "595"}
+{"id": "sum-first-n-026", "question": "What is the sum of the first 32 positive integers?", "answer": "528"}
+{"id": "sum-first-n-027", "question": "What is the sum of the first 195 positive integers?", "answer": "19110"}
+{"id": "sum-first-n-028", "question": "What is the sum of the first 146 positive integers?", "answer": "10731"}
+{"id": "sum-first-n-029", "question": "What is the sum of the first 44 positive integers?", "answer": "990"}
+{"id": "sum-first-n-030", "question": "What is the sum of the first 74 positive integers?", "answer": "2775"}
+{"id": "sum-first-n-031", "question": "What is the sum of the first 77 positive integers?", "answer": "3003"}
+{"id": "sum-first-n-032", "question": "What is the sum of the first 159 positive integers?", "answer": "12720"}
+{"id": "sum-first-n-033", "question": "What is the sum of the first 58 positive integers?", "answer": "1711"}
+{"id": "sum-first-n-034", "question": "What is the sum of the first 188 positive integers?", "answer": "17766"}
+{"id": "sum-first-n-035", "question": "What is the sum of the first 92 positive integers?", "answer": "4278"}
+{"id": "sum-first-n-036", "question": "What is the sum of the first 57 positive integers?", "answer": "1653"}
+{"id": "sum-first-n-037", "question": "What is the sum of the first 180 positive integers?", "answer": "16290"}
+{"id": "sum-first-n-038", "question": "What is the sum of the first 167 positive integers?", "answer": "14028"}
+{"id": "sum-first-n-039", "question": "What is the sum of the first 72 positive integers?", "answer": "2628"}
+{"id": "sum-first-n-040", "question": "What is the sum of the first 134 positive integers?", "answer": "9045"}

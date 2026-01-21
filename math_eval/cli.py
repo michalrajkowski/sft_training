@@ -23,6 +23,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--dtype", type=str, default=None, help="Override torch dtype (float32, float16, bfloat16).")
     parser.add_argument("--device", type=str, default=None, help="Override device map (e.g., 'auto', 'cuda:0', 'cpu').")
     parser.add_argument("--list-models", action="store_true", help="List available models and exit.")
+    parser.add_argument("--show-failures", action="store_true", help="Print failed cases to stdout.")
+    parser.add_argument("--report", type=str, default=None, help="Write a human-readable report (txt).")
+    parser.add_argument("--batch-size", type=int, default=1, help="Batch size for generation (helps GPU throughput).")
     return parser.parse_args()
 
 
@@ -60,14 +63,52 @@ def main() -> None:
         device_override=args.device,
     )
 
-    evaluator = MathEvaluator(pipeline, gen_kwargs)
+    evaluator = MathEvaluator(pipeline, gen_kwargs, batch_size=args.batch_size)
     summary = evaluator.run(tasks)
 
     print(f"Accuracy: {summary['accuracy']*100:.1f}% ({summary['correct']}/{summary['total']})")
+    failures = [r for r in summary["results"] if not r.is_correct]
+
+    if args.show_failures and failures:
+        print("\nFailed cases:")
+        for rec in failures:
+            print(f"- {rec.task_id}: expected '{rec.reference_answer}', predicted '{rec.extracted_answer}'")
+            print(f"  question: {rec.question}")
+            print(f"  model output: {_truncate(rec.model_output)}")
+        print("")
 
     if args.output:
         MathEvaluator.write_results(args.output, summary["results"])
         print(f"Wrote results to {args.output}")
+
+    if args.report:
+        write_text_report(args.report, summary, failures)
+        print(f"Wrote report to {args.report}")
+
+
+def _truncate(text: str, limit: int = 220) -> str:
+    return text if len(text) <= limit else text[: limit - 3] + "..."
+
+
+def write_text_report(path: str, summary, failures) -> None:
+    lines = [
+        f"Total: {summary['total']}",
+        f"Correct: {summary['correct']}",
+        f"Accuracy: {summary['accuracy']*100:.1f}%",
+        "",
+    ]
+    if failures:
+        lines.append("Failed cases:")
+        for rec in failures:
+            lines.append(f"- {rec.task_id}: expected '{rec.reference_answer}', predicted '{rec.extracted_answer}'")
+            lines.append(f"  question: {rec.question}")
+            lines.append(f"  model output: {_truncate(rec.model_output)}")
+    else:
+        lines.append("All cases correct.")
+
+    output_path = Path(path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text("\n".join(lines))
 
 
 if __name__ == "__main__":
