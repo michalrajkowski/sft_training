@@ -1,0 +1,38 @@
+models:
+  qwen2.5-0.5b:
+    display_name: Qwen2.5 0.5B Instruct
+    repo_id: Qwen/Qwen2.5-0.5B-Instruct
+    revision: main
+    trust_remote_code: true
+    device_map: auto
+    torch_dtype: bfloat16
+    generation:
+      max_new_tokens: 256
+      temperature: 0.2
+      top_p: 0.95
+
+  qwen2.5-1.5b:
+    display_name: Qwen2.5 1.5B Instruct
+    repo_id: Qwen/Qwen2.5-1.5B-Instruct
+    revision: main
+    trust_remote_code: true
+    device_map: auto
+    torch_dtype: bfloat16
+    generation:
+      max_new_tokens: 256
+      temperature: 0.2
+      top_p: 0.95
+
+  # Example of a locally finetuned / modified checkpoint.
+  # Point local_path to the directory that contains model files (config.json, model.safetensors, tokenizer files, etc).
+  qwen2.5-1.5b-local:
+    display_name: Qwen2.5 1.5B Instruct (local)
+    repo_id: Qwen/Qwen2.5-1.5B-Instruct  # kept for reference; not used when local_path is set
+    local_path: "../local-checkpoints/qwen2.5-1.5b-instruct"
+    trust_remote_code: true
+    device_map: auto
+    torch_dtype: bfloat16
+    generation:
+      max_new_tokens: 256
+      temperature: 0.2
+      top_p: 0.95

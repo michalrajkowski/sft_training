@@ -1,0 +1,5 @@
+{"id": "sample-1", "question": "Compute 12 * 7.", "answer": "84"}
+{"id": "sample-2", "question": "A rectangle has length 5 and width 3. What is its area?", "answer": "15"}
+{"id": "sample-3", "question": "Solve for x: 2x + 3 = 11.", "answer": "4"}
+{"id": "sample-4", "question": "Simplify the fraction 45/60.", "answer": "3/4"}
+{"id": "sample-5", "question": "What is the sum of the first 10 positive integers?", "answer": "55"}
