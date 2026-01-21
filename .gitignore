@@ -13,3 +13,6 @@ __pycache__/
 # Outputs / logs
 results/
 *.log
+
+# Downloaded datasets
+data/datasets/

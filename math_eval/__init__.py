@@ -4,4 +4,5 @@ __all__ = [
     "dataset_loader",
     "model_loader",
     "evaluator",
+    "dataset_registry",
 ]

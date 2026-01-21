@@ -1,0 +1,23 @@
+datasets:
+  gsm8k_train:
+    display_name: GSM8K (train)
+    source: openai/gsm8k
+    subset: main
+    split: train
+    format: gsm8k
+    output_path: ../data/datasets/gsm8k_train.jsonl
+
+  gsm8k_test:
+    display_name: GSM8K (test)
+    source: openai/gsm8k
+    subset: main
+    split: test
+    format: gsm8k
+    output_path: ../data/datasets/gsm8k_test.jsonl
+
+  gsm8k_pairwise_train:
+    display_name: GSM8K pairwise (train)
+    source: reciprocate/gsm8k_train_pairwise
+    split: train
+    format: pairwise
+    output_path: ../data/datasets/gsm8k_pairwise_train.jsonl
